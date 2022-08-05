@@ -7,10 +7,9 @@ import com.platzi.android.rickandmorty.api.EpisodeServer
 import com.platzi.android.rickandmorty.databinding.ItemListEpisodeBinding
 import com.platzi.android.rickandmorty.utils.bindingInflate
 
-
 class EpisodeListAdapter(
     private val listener: (EpisodeServer) -> Unit
-): RecyclerView.Adapter<EpisodeListAdapter.EpisodeListViewHolder>() {
+) : RecyclerView.Adapter<EpisodeListAdapter.EpisodeListViewHolder>() {
 
     private val episodeList: MutableList<EpisodeServer> = mutableListOf()
 
@@ -35,13 +34,12 @@ class EpisodeListAdapter(
     class EpisodeListViewHolder(
         private val dataBinding: ItemListEpisodeBinding,
         private val listener: (EpisodeServer) -> Unit
-    ): RecyclerView.ViewHolder(dataBinding.root) {
+    ) : RecyclerView.ViewHolder(dataBinding.root) {
 
         //region Public Methods
-        fun bind(item: EpisodeServer){
+        fun bind(item: EpisodeServer) {
             dataBinding.episode = item
             itemView.setOnClickListener { listener(item) }
         }
-
     }
 }
