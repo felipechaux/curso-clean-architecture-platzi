@@ -11,6 +11,7 @@ import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import java.sql.RowId
 
 class CharacterDetailViewModel(
     private val characterDao: CharacterDao,
@@ -28,14 +29,17 @@ class CharacterDetailViewModel(
     val characterDetail: MutableLiveData<CharacterServer>
         get() = _characterDetail
 
+    private val _isFavorite = MutableLiveData<Boolean>()
+    val isFavorite: LiveData<Boolean> get() = _isFavorite
+
     override fun onCleared() {
         super.onCleared()
         disposable.clear()
     }
 
-    fun onValidateFavoriteCharacterStatus() {
+    fun onValidateFavoriteCharacterStatus(characterId: Int) {
         disposable.add(
-            characterDao.getCharacterById(character!!.id)
+            characterDao.getCharacterById(characterId)
                 .isEmpty
                 .flatMapMaybe { isEmpty ->
                     Maybe.just(!isEmpty)
@@ -44,7 +48,7 @@ class CharacterDetailViewModel(
                 .subscribeOn(Schedulers.io())
                 .subscribe { isFavorite ->
                     //  updateFavoriteIcon(isFavorite)
-                    _events.value = Event(CharacterDetailNavigation.UpdateFavoriteIcon(isFavorite))
+                    _isFavorite.value = isFavorite
                 }
         )
     }
@@ -102,16 +106,18 @@ class CharacterDetailViewModel(
                 .subscribeOn(Schedulers.io())
                 .subscribe { isFavorite ->
                     //  updateFavoriteIcon(isFavorite)
-                    _events.value = Event(CharacterDetailNavigation.UpdateFavoriteIcon(isFavorite))
+                    _isFavorite.value = isFavorite
                 }
         )
     }
 
-    fun onCharacterDetail() {
+    fun onCharacterValidation() {
         if (character == null) {
             _events.value = Event(CharacterDetailNavigation.ShowCharacterDetailError)
         } else {
             _characterDetail.value = character
+            onValidateFavoriteCharacterStatus(character.id)
+            onShowEpisodeList(character.episodeList)
         }
     }
 
@@ -123,8 +129,6 @@ class CharacterDetailViewModel(
 
         data class ShowCharacterDetailEpisodeList(val episodeList: List<EpisodeServer>) :
             CharacterDetailNavigation()
-
-        data class UpdateFavoriteIcon(val isFavorite: Boolean) : CharacterDetailNavigation()
 
         object HideEpisodeLoading : CharacterDetailNavigation()
         object ShowEpisodeLoading : CharacterDetailNavigation()

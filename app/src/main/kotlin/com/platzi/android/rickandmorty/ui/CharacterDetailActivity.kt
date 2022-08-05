@@ -15,6 +15,7 @@ import com.platzi.android.rickandmorty.database.CharacterDao
 import com.platzi.android.rickandmorty.database.CharacterDatabase
 import com.platzi.android.rickandmorty.databinding.ActivityCharacterDetailBinding
 import com.platzi.android.rickandmorty.presentation.CharacterDetailViewModel
+import com.platzi.android.rickandmorty.presentation.Event
 import com.platzi.android.rickandmorty.utils.Constants
 import com.platzi.android.rickandmorty.utils.bindCircularImageUrl
 import com.platzi.android.rickandmorty.utils.getViewModel
@@ -66,59 +67,18 @@ class CharacterDetailActivity : AppCompatActivity() {
         }
         rvEpisodeList.adapter = episodeListAdapter
 
-        characterDetailViewModel.events.observe(
-            this,
-            Observer { events ->
-                events?.getContentIfNotHandled()?.let { navigation ->
-                    when (navigation) {
-                        CharacterDetailViewModel.CharacterDetailNavigation.ShowCharacterDetailError -> {
-                            this@CharacterDetailActivity.showLongToast(R.string.error_no_character_data.toString())
-                            finish()
-                        }
-                        is CharacterDetailViewModel.CharacterDetailNavigation.ShowCharacterDetailEpisodeList -> navigation.run {
-                            episodeListAdapter.updateData(episodeList)
-                        }
-                        is CharacterDetailViewModel.CharacterDetailNavigation.ShowCharacterDetailEpisodeError -> {
-                            this.showLongToast("Error")
-                        }
-                        is CharacterDetailViewModel.CharacterDetailNavigation.UpdateFavoriteIcon -> navigation.run {
-                            updateFavoriteIcon(isFavorite)
-                        }
-                        CharacterDetailViewModel.CharacterDetailNavigation.ShowEpisodeLoading -> {
-                            episodeProgressBar.isVisible = true
-                        }
-                        CharacterDetailViewModel.CharacterDetailNavigation.HideEpisodeLoading -> {
-                            episodeProgressBar.isVisible = false
-                        }
-                    }
-                }
-            }
-        )
+        characterFavorite.setOnClickListener { characterDetailViewModel.onUpdateFavoriteCharacterStatus() }
 
         characterDetailViewModel.characterDetail.observe(
             this,
-            Observer {
-                binding.characterImage.bindCircularImageUrl(
-                    url = it.image,
-                    placeholder = R.drawable.ic_camera_alt_black,
-                    errorPlaceholder = R.drawable.ic_broken_image_black
-                )
-                binding.characterDataName = it.name
-                binding.characterDataStatus = it.status
-                binding.characterDataSpecies = it.species
-                binding.characterDataGender = it.gender
-                binding.characterDataOriginName = it.origin.name
-                binding.characterDataLocationName = it.location.name
-            }
+            Observer(this::loadCharacterDetail)
         )
-
-        characterDetailViewModel.onCharacterDetail()
-
-        characterDetailViewModel.onValidateFavoriteCharacterStatus()
-
-        characterDetailViewModel.onShowEpisodeList(character!!.episodeList)
-
-        characterFavorite.setOnClickListener { characterDetailViewModel.onUpdateFavoriteCharacterStatus() }
+        characterDetailViewModel.isFavorite.observe(this, Observer(this::updateFavoriteIcon))
+        characterDetailViewModel.events.observe(
+            this,
+            Observer(this::validateEvents)
+        )
+        characterDetailViewModel.onCharacterValidation()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -144,5 +104,41 @@ class CharacterDetailActivity : AppCompatActivity() {
         )
     }
 
+    private fun loadCharacterDetail(characterDetail: CharacterServer) {
+        binding.characterImage.bindCircularImageUrl(
+            url = characterDetail.image,
+            placeholder = R.drawable.ic_camera_alt_black,
+            errorPlaceholder = R.drawable.ic_broken_image_black
+        )
+        binding.characterDataName = characterDetail.name
+        binding.characterDataStatus = characterDetail.status
+        binding.characterDataSpecies = characterDetail.species
+        binding.characterDataGender = characterDetail.gender
+        binding.characterDataOriginName = characterDetail.origin.name
+        binding.characterDataLocationName = characterDetail.location.name
+    }
+
+    private fun validateEvents(event: Event<CharacterDetailViewModel.CharacterDetailNavigation>) {
+        event.getContentIfNotHandled()?.let { navigation ->
+            when (navigation) {
+                CharacterDetailViewModel.CharacterDetailNavigation.ShowCharacterDetailError -> {
+                    this@CharacterDetailActivity.showLongToast(R.string.error_no_character_data.toString())
+                    finish()
+                }
+                is CharacterDetailViewModel.CharacterDetailNavigation.ShowCharacterDetailEpisodeList -> navigation.run {
+                    episodeListAdapter.updateData(episodeList)
+                }
+                is CharacterDetailViewModel.CharacterDetailNavigation.ShowCharacterDetailEpisodeError -> {
+                    this.showLongToast("Error")
+                }
+                CharacterDetailViewModel.CharacterDetailNavigation.ShowEpisodeLoading -> {
+                    episodeProgressBar.isVisible = true
+                }
+                CharacterDetailViewModel.CharacterDetailNavigation.HideEpisodeLoading -> {
+                    episodeProgressBar.isVisible = false
+                }
+            }
+        }
+    }
     //endregion
 }
