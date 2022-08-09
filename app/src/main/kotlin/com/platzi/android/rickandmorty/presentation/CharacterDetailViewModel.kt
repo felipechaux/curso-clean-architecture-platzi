@@ -3,20 +3,21 @@ package com.platzi.android.rickandmorty.presentation
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.platzi.android.rickandmorty.api.*
-import com.platzi.android.rickandmorty.database.CharacterDao
+import com.platzi.android.rickandmorty.api.CharacterServer
+import com.platzi.android.rickandmorty.api.EpisodeServer
+import com.platzi.android.rickandmorty.api.toCharacterEntity
 import com.platzi.android.rickandmorty.database.CharacterEntity
-import io.reactivex.Maybe
-import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
+import com.platzi.android.rickandmorty.usecases.GetEpisodeFromCharacterUseCase
+import com.platzi.android.rickandmorty.usecases.GetFavoriteStatusUseCase
+import com.platzi.android.rickandmorty.usecases.UpdateFavoriteStatusUseCase
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import java.sql.RowId
 
 class CharacterDetailViewModel(
-    private val characterDao: CharacterDao,
     private val character: CharacterServer?,
-    private val episodeRequest: EpisodeRequest
+    private val getEpisodeFromCharacterUseCase: GetEpisodeFromCharacterUseCase,
+    private val getFavoriteStatusUseCase: GetFavoriteStatusUseCase,
+    private val updateFavoriteStatusUseCase: UpdateFavoriteStatusUseCase
 ) : ViewModel() {
 
     private val disposable = CompositeDisposable()
@@ -37,15 +38,9 @@ class CharacterDetailViewModel(
         disposable.clear()
     }
 
-    fun onValidateFavoriteCharacterStatus(characterId: Int) {
+    private fun onValidateFavoriteCharacterStatus(characterId: Int) {
         disposable.add(
-            characterDao.getCharacterById(characterId)
-                .isEmpty
-                .flatMapMaybe { isEmpty ->
-                    Maybe.just(!isEmpty)
-                }
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io())
+            getFavoriteStatusUseCase.invoke(characterId)
                 .subscribe { isFavorite ->
                     //  updateFavoriteIcon(isFavorite)
                     _isFavorite.value = isFavorite
@@ -53,23 +48,12 @@ class CharacterDetailViewModel(
         )
     }
 
-    fun onShowEpisodeList(episodeUrlList: List<String>) {
+    private fun requestShowEpisodeList(episodeUrlList: List<String>) {
         disposable.add(
-            Observable.fromIterable(episodeUrlList)
-                .flatMap { episode: String ->
-                    episodeRequest.baseUrl = episode
-                    episodeRequest
-                        .getService<EpisodeService>()
-                        .getEpisode()
-                        .toObservable()
-                }
-                .toList()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io())
-                .doOnSubscribe {
-                    // episodeProgressBar.isVisible = true
-                    _events.value = Event(CharacterDetailNavigation.ShowEpisodeLoading)
-                }
+            getEpisodeFromCharacterUseCase.invoke(episodeUrlList).doOnSubscribe {
+                // episodeProgressBar.isVisible = true
+                _events.value = Event(CharacterDetailNavigation.ShowEpisodeLoading)
+            }
                 .subscribe(
                     { episodeList ->
                         //  episodeProgressBar.isVisible = false
@@ -89,20 +73,10 @@ class CharacterDetailViewModel(
         )
     }
 
-    fun onUpdateFavoriteCharacterStatus() {
+    fun updateFavoriteCharacterStatus() {
         val characterEntity: CharacterEntity = character!!.toCharacterEntity()
         disposable.add(
-            characterDao.getCharacterById(characterEntity.id)
-                .isEmpty
-                .flatMapMaybe { isEmpty ->
-                    if (isEmpty) {
-                        characterDao.insertCharacter(characterEntity)
-                    } else {
-                        characterDao.deleteCharacter(characterEntity)
-                    }
-                    Maybe.just(isEmpty)
-                }
-                .observeOn(AndroidSchedulers.mainThread())
+            updateFavoriteStatusUseCase.invoke(characterEntity)
                 .subscribeOn(Schedulers.io())
                 .subscribe { isFavorite ->
                     //  updateFavoriteIcon(isFavorite)
@@ -117,7 +91,7 @@ class CharacterDetailViewModel(
         } else {
             _characterDetail.value = character
             onValidateFavoriteCharacterStatus(character.id)
-            onShowEpisodeList(character.episodeList)
+            requestShowEpisodeList(character.episodeList)
         }
     }
 

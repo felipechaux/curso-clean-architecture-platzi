@@ -16,6 +16,9 @@ import com.platzi.android.rickandmorty.database.CharacterDatabase
 import com.platzi.android.rickandmorty.databinding.ActivityCharacterDetailBinding
 import com.platzi.android.rickandmorty.presentation.CharacterDetailViewModel
 import com.platzi.android.rickandmorty.presentation.Event
+import com.platzi.android.rickandmorty.usecases.GetEpisodeFromCharacterUseCase
+import com.platzi.android.rickandmorty.usecases.GetFavoriteStatusUseCase
+import com.platzi.android.rickandmorty.usecases.UpdateFavoriteStatusUseCase
 import com.platzi.android.rickandmorty.utils.Constants
 import com.platzi.android.rickandmorty.utils.bindCircularImageUrl
 import com.platzi.android.rickandmorty.utils.getViewModel
@@ -41,13 +44,26 @@ class CharacterDetailActivity : AppCompatActivity() {
 
     private var character: CharacterServer? = null
 
+    private val getFavoriteStatusUseCase: GetFavoriteStatusUseCase by lazy {
+        GetFavoriteStatusUseCase(characterDao)
+    }
+
+    private val updateFavoriteStatusUseCase: UpdateFavoriteStatusUseCase by lazy {
+        UpdateFavoriteStatusUseCase(characterDao)
+    }
+
+    private val getEpisodeFromCharacterUseCase: GetEpisodeFromCharacterUseCase by lazy {
+        GetEpisodeFromCharacterUseCase(episodeRequest)
+    }
+
     private val characterDetailViewModel: CharacterDetailViewModel by lazy {
         // getViewModel use for  CharacterDetailViewModel (,,)
         getViewModel {
             CharacterDetailViewModel(
-                characterDao,
                 intent.getParcelableExtra(Constants.EXTRA_CHARACTER),
-                episodeRequest
+                getEpisodeFromCharacterUseCase,
+                getFavoriteStatusUseCase,
+                updateFavoriteStatusUseCase
             )
         }
     }
@@ -67,7 +83,7 @@ class CharacterDetailActivity : AppCompatActivity() {
         }
         rvEpisodeList.adapter = episodeListAdapter
 
-        characterFavorite.setOnClickListener { characterDetailViewModel.onUpdateFavoriteCharacterStatus() }
+        characterFavorite.setOnClickListener { characterDetailViewModel.updateFavoriteCharacterStatus() }
 
         characterDetailViewModel.characterDetail.observe(
             this,
