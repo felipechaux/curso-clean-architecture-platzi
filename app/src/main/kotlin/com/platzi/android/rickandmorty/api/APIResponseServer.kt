@@ -30,19 +30,19 @@ data class CharacterServer(
     @SerializedName(KEY_ORIGIN) val origin: OriginServer,
     @SerializedName(KEY_LOCATION) val location: LocationServer,
     @SerializedName(KEY_EPISODE) val episodeList: List<String>
-): Parcelable
+) : Parcelable
 
 @Parcelize
 data class LocationServer(
     @SerializedName(KEY_NAME) val name: String,
     @SerializedName(KEY_URL) val url: String
-): Parcelable
+) : Parcelable
 
 @Parcelize
 data class OriginServer(
     @SerializedName(KEY_NAME) val name: String,
     @SerializedName(KEY_URL) val url: String
-): Parcelable
+) : Parcelable
 
 data class EpisodeServer(
     @SerializedName(KEY_ID) val id: Int,

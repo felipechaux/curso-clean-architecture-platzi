@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.platzi.android.rickandmorty.api.*
+import com.platzi.android.rickandmorty.domain.Character
 import com.platzi.android.rickandmorty.usecases.GetAllCharactersUseCase
 import io.reactivex.disposables.CompositeDisposable
 
@@ -83,7 +84,7 @@ class CharacterListViewModel(
     // clase para indicar estados
     sealed class CharacterListNagivation {
         data class ShowCharacterError(val error: Throwable) : CharacterListNagivation()
-        data class ShowCharacterList(val characterList: List<CharacterServer>) :
+        data class ShowCharacterList(val characterList: List<Character>) :
             CharacterListNagivation()
 
         object HideLoading : CharacterListNagivation()

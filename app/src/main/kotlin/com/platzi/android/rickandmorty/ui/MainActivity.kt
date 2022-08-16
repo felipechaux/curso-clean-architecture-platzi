@@ -7,15 +7,15 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.platzi.android.rickandmorty.R
 import com.platzi.android.rickandmorty.adapters.HomeNavigationStateAdapter
-import com.platzi.android.rickandmorty.api.CharacterServer
-import com.platzi.android.rickandmorty.database.CharacterEntity
-import com.platzi.android.rickandmorty.database.toCharacterServer
+import com.platzi.android.rickandmorty.domain.Character
+import com.platzi.android.rickandmorty.parcelable.toCharacterParcelable
 import com.platzi.android.rickandmorty.utils.Constants
 import com.platzi.android.rickandmorty.utils.startActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-
-class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener,
+class MainActivity :
+    AppCompatActivity(),
+    BottomNavigationView.OnNavigationItemSelectedListener,
     CharacterListFragment.OnCharacterListFragmentListener,
     FavoriteListFragment.OnFavoriteListFragmentListener {
 
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private val homeStatePageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
             viewPager.currentItem = position
-            when(position) {
+            when (position) {
                 0 -> bottomNavigation.menu.findItem(R.id.navigation_list).isChecked = true
                 1 -> bottomNavigation.menu.findItem(R.id.navigation_favorites).isChecked = true
             }
@@ -64,16 +64,9 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         }
     }
 
-    override fun openCharacterDetail(character: CharacterEntity) {
+    override fun openCharacterDetail(character: Character) {
         startActivity<CharacterDetailActivity> {
-            putExtra(Constants.EXTRA_CHARACTER, character.toCharacterServer())
-        }
-        overridePendingTransition(R.anim.entry, R.anim.exit)
-    }
-
-    override fun openCharacterDetail(character: CharacterServer) {
-        startActivity<CharacterDetailActivity> {
-            putExtra(Constants.EXTRA_CHARACTER, character)
+            putExtra(Constants.EXTRA_CHARACTER, character.toCharacterParcelable())
         }
         overridePendingTransition(R.anim.entry, R.anim.exit)
     }
