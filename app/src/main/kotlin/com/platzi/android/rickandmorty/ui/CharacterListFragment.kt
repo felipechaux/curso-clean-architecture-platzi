@@ -14,6 +14,11 @@ import com.platzi.android.rickandmorty.R
 import com.platzi.android.rickandmorty.adapters.CharacterGridAdapter
 import com.platzi.android.rickandmorty.api.* // ktlint-disable no-wildcard-imports
 import com.platzi.android.rickandmorty.api.APIConstants.BASE_API_URL
+import com.platzi.android.rickandmorty.data.CharacterRepository
+import com.platzi.android.rickandmorty.data.LocalCharacterDataSource
+import com.platzi.android.rickandmorty.data.RemoteCharacterDataSource
+import com.platzi.android.rickandmorty.database.CharacterDatabase
+import com.platzi.android.rickandmorty.database.CharacterRoomDataSource
 import com.platzi.android.rickandmorty.databinding.FragmentCharacterListBinding
 import com.platzi.android.rickandmorty.domain.Character
 import com.platzi.android.rickandmorty.presentation.CharacterListViewModel
@@ -29,8 +34,20 @@ class CharacterListFragment : Fragment() {
     private lateinit var listener: OnCharacterListFragmentListener
     private lateinit var characterRequest: CharacterRequest
 
+    private val remoteCharacterDataSource: RemoteCharacterDataSource by lazy {
+        CharacterRetrofitDataSource(characterRequest)
+    }
+
+    private val localCharacterDataSource: LocalCharacterDataSource by lazy {
+        CharacterRoomDataSource(CharacterDatabase.getDatabase(activity!!.applicationContext))
+    }
+
+    private val characterRepository: CharacterRepository by lazy {
+        CharacterRepository(remoteCharacterDataSource, localCharacterDataSource)
+    }
+
     private val getAllCharactersUseCase: GetAllCharactersUseCase by lazy {
-        GetAllCharactersUseCase(characterRequest)
+        GetAllCharactersUseCase(characterRepository)
     }
 
     private val characterListViewModel by lazy {

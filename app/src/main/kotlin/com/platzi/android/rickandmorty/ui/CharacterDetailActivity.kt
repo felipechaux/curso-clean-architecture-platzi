@@ -9,9 +9,13 @@ import androidx.lifecycle.Observer
 import com.platzi.android.rickandmorty.R
 import com.platzi.android.rickandmorty.adapters.EpisodeListAdapter
 import com.platzi.android.rickandmorty.api.APIConstants.BASE_API_URL
+import com.platzi.android.rickandmorty.api.CharacterRequest
+import com.platzi.android.rickandmorty.api.CharacterRetrofitDataSource
 import com.platzi.android.rickandmorty.api.EpisodeRequest
-import com.platzi.android.rickandmorty.database.CharacterDao
+import com.platzi.android.rickandmorty.api.EpisodeRetrofitDataSource
+import com.platzi.android.rickandmorty.data.* // ktlint-disable no-wildcard-imports
 import com.platzi.android.rickandmorty.database.CharacterDatabase
+import com.platzi.android.rickandmorty.database.CharacterRoomDataSource
 import com.platzi.android.rickandmorty.databinding.ActivityCharacterDetailBinding
 import com.platzi.android.rickandmorty.domain.Character
 import com.platzi.android.rickandmorty.parcelable.CharacterParcelable
@@ -40,27 +44,48 @@ class CharacterDetailActivity : AppCompatActivity() {
         EpisodeRequest(BASE_API_URL)
     }
 
-    private val characterDao: CharacterDao by lazy {
-        CharacterDatabase.getDatabase(application).characterDao()
+    private val characterRequest: CharacterRequest by lazy {
+        CharacterRequest(BASE_API_URL)
+    }
+
+    private val remoteCharacterDataSource: RemoteCharacterDataSource by lazy {
+        CharacterRetrofitDataSource(characterRequest)
+    }
+
+    private val remoteEpisodeDataSource: RemoteEpisodeDataSource by lazy {
+        EpisodeRetrofitDataSource(episodeRequest)
+    }
+
+    private val localCharacterDataSource: LocalCharacterDataSource by lazy {
+        CharacterRoomDataSource(CharacterDatabase.getDatabase(applicationContext))
+    }
+
+    private val characterRepository: CharacterRepository by lazy {
+        CharacterRepository(remoteCharacterDataSource, localCharacterDataSource)
+    }
+
+    private val episodeRepository: EpisodeRepository by lazy {
+        EpisodeRepository(remoteEpisodeDataSource)
     }
 
     private val getFavoriteStatusUseCase: GetFavoriteStatusUseCase by lazy {
-        GetFavoriteStatusUseCase(characterDao)
+        GetFavoriteStatusUseCase(characterRepository)
     }
 
     private val updateFavoriteStatusUseCase: UpdateFavoriteStatusUseCase by lazy {
-        UpdateFavoriteStatusUseCase(characterDao)
+        UpdateFavoriteStatusUseCase(characterRepository)
     }
 
     private val getEpisodeFromCharacterUseCase: GetEpisodeFromCharacterUseCase by lazy {
-        GetEpisodeFromCharacterUseCase(episodeRequest)
+        GetEpisodeFromCharacterUseCase(episodeRepository)
     }
 
     private val characterDetailViewModel: CharacterDetailViewModel by lazy {
         // getViewModel use for  CharacterDetailViewModel (,,)
         getViewModel {
             CharacterDetailViewModel(
-                intent.getParcelableExtra<CharacterParcelable>(Constants.EXTRA_CHARACTER)?.toCharacterDomain(),
+                intent.getParcelableExtra<CharacterParcelable>(Constants.EXTRA_CHARACTER)
+                    ?.toCharacterDomain(),
                 getEpisodeFromCharacterUseCase,
                 getFavoriteStatusUseCase,
                 updateFavoriteStatusUseCase
