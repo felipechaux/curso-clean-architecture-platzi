@@ -14,6 +14,11 @@ import com.platzi.android.rickandmorty.R
 import com.platzi.android.rickandmorty.adapters.CharacterGridAdapter
 import com.platzi.android.rickandmorty.api.* // ktlint-disable no-wildcard-imports
 import com.platzi.android.rickandmorty.api.APIConstants.BASE_API_URL
+<<<<<<< HEAD
+=======
+import com.platzi.android.rickandmorty.api.CharacterRequest
+import com.platzi.android.rickandmorty.api.CharacterRetrofitDataSource
+>>>>>>> feat/step_19/extra_use_cases_module
 import com.platzi.android.rickandmorty.data.CharacterRepository
 import com.platzi.android.rickandmorty.data.LocalCharacterDataSource
 import com.platzi.android.rickandmorty.data.RemoteCharacterDataSource
@@ -22,7 +27,15 @@ import com.platzi.android.rickandmorty.database.CharacterRoomDataSource
 import com.platzi.android.rickandmorty.databinding.FragmentCharacterListBinding
 import com.platzi.android.rickandmorty.domain.Character
 import com.platzi.android.rickandmorty.presentation.CharacterListViewModel
+<<<<<<< HEAD
 import com.platzi.android.rickandmorty.usecases.GetAllCharactersUseCase
+=======
+import com.platzi.android.rickandmorty.presentation.CharacterListViewModel.CharacterListNavigation
+import com.platzi.android.rickandmorty.presentation.CharacterListViewModel.CharacterListNavigation.*
+import com.platzi.android.rickandmorty.presentation.utils.Event
+import com.platzi.android.rickandmorty.usecases.GetAllCharactersUseCase
+import com.platzi.android.rickandmorty.utils.getViewModel
+>>>>>>> feat/step_19/extra_use_cases_module
 import com.platzi.android.rickandmorty.utils.setItemDecorationSpacing
 import com.platzi.android.rickandmorty.utils.showLongToast
 import kotlinx.android.synthetic.main.fragment_character_list.*
@@ -50,8 +63,29 @@ class CharacterListFragment : Fragment() {
         GetAllCharactersUseCase(characterRepository)
     }
 
+<<<<<<< HEAD
     private val characterListViewModel by lazy {
         CharacterListViewModel(getAllCharactersUseCase)
+=======
+    private val localCharacterDataSource: LocalCharacterDataSource by lazy {
+        CharacterRoomDataSource(CharacterDatabase.getDatabase(activity!!.applicationContext))
+    }
+
+    private val remoteCharacterDataSource: RemoteCharacterDataSource by lazy {
+        CharacterRetrofitDataSource(characterRequest)
+    }
+
+    private val characterRepository: CharacterRepository by lazy {
+        CharacterRepository(remoteCharacterDataSource, localCharacterDataSource)
+    }
+
+    private val getAllCharactersUseCase: GetAllCharactersUseCase by lazy {
+        GetAllCharactersUseCase(characterRepository)
+    }
+
+    private val characterListViewModel: CharacterListViewModel by lazy {
+        getViewModel { CharacterListViewModel(getAllCharactersUseCase) }
+>>>>>>> feat/step_19/extra_use_cases_module
     }
 
     private val onScrollListener: RecyclerView.OnScrollListener by lazy {

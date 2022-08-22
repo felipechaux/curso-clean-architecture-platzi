@@ -8,7 +8,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.platzi.android.rickandmorty.R
 import com.platzi.android.rickandmorty.adapters.HomeNavigationStateAdapter
 import com.platzi.android.rickandmorty.domain.Character
+<<<<<<< HEAD
 import com.platzi.android.rickandmorty.parcelable.toCharacterParcelable
+=======
+import com.platzi.android.rickandmorty.parcelables.toCharacterParcelable
+>>>>>>> feat/step_19/extra_use_cases_module
 import com.platzi.android.rickandmorty.utils.Constants
 import com.platzi.android.rickandmorty.utils.startActivity
 import kotlinx.android.synthetic.main.activity_main.*

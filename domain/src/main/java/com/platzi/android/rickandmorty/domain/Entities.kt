@@ -6,6 +6,7 @@ data class Character(
     val image: String?,
     val gender: String,
     val species: String,
+<<<<<<< HEAD
     var status: String,
     var origin: Origin,
     var location: Location,
@@ -13,11 +14,24 @@ data class Character(
 )
 
 data class Origin(
+=======
+    val status: String,
+    val origin: Origin,
+    val location: Location,
+    val episodeList: List<String>
+)
+
+data class Location(
+>>>>>>> feat/step_19/extra_use_cases_module
     val name: String,
     val url: String
 )
 
+<<<<<<< HEAD
 data class Location(
+=======
+data class Origin(
+>>>>>>> feat/step_19/extra_use_cases_module
     val name: String,
     val url: String
 )

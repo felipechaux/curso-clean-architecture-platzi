@@ -11,13 +11,24 @@ interface RemoteCharacterDataSource {
 }
 
 interface LocalCharacterDataSource {
+<<<<<<< HEAD
     fun getAllFavoriteCharacters(): Flowable<List<Character>>
 
     fun getFavoriteCharacterStatus(id: Int): Maybe<Boolean>
+=======
+
+    fun getAllFavoriteCharacters(): Flowable<List<Character>>
+
+    fun getFavoriteCharacterStatus(characterId: Int): Maybe<Boolean>
+>>>>>>> feat/step_19/extra_use_cases_module
 
     fun updateFavoriteCharacterStatus(character: Character): Maybe<Boolean>
 }
 
 interface RemoteEpisodeDataSource {
+<<<<<<< HEAD
     fun getEpisodesFromCharacter(episodeUrlList: List<String>): Single<List<Episode>>
+=======
+    fun getEpisodeFromCharacter(episodeUrlList: List<String>): Single<List<Episode>>
+>>>>>>> feat/step_19/extra_use_cases_module
 }

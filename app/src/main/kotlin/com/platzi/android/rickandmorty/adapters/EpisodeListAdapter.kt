@@ -9,7 +9,11 @@ import com.platzi.android.rickandmorty.utils.bindingInflate
 
 class EpisodeListAdapter(
     private val listener: (Episode) -> Unit
+<<<<<<< HEAD
 ) : RecyclerView.Adapter<EpisodeListAdapter.EpisodeListViewHolder>() {
+=======
+): RecyclerView.Adapter<EpisodeListAdapter.EpisodeListViewHolder>() {
+>>>>>>> feat/step_19/extra_use_cases_module
 
     private val episodeList: MutableList<Episode> = mutableListOf()
 
@@ -34,10 +38,16 @@ class EpisodeListAdapter(
     class EpisodeListViewHolder(
         private val dataBinding: ItemListEpisodeBinding,
         private val listener: (Episode) -> Unit
+<<<<<<< HEAD
     ) : RecyclerView.ViewHolder(dataBinding.root) {
 
         //region Public Methods
         fun bind(item: Episode) {
+=======
+    ): RecyclerView.ViewHolder(dataBinding.root) {
+
+        fun bind(item: Episode){
+>>>>>>> feat/step_19/extra_use_cases_module
             dataBinding.episode = item
             itemView.setOnClickListener { listener(item) }
         }

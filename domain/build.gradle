@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 plugins {
     id 'java-library'
     id 'kotlin'
 }
+=======
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+>>>>>>> feat/step_19/extra_use_cases_module
 
 dependencies {
     implementation kotlinLib

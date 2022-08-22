@@ -1,8 +1,4 @@
 
-X
-(gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
-@
-app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
 Å
 Qapp/src/main/kotlin/com/platzi/android/rickandmorty/database/CharacterDatabase.kt,2/4/24b5a7f981328a6e3fbd676328b49a3106406a28
 É
@@ -15,11 +11,5 @@ w
 Gapp/src/main/kotlin/com/platzi/android/rickandmorty/utils/Extensions.kt,2/b/2b4ea5517caf2213654d9e9591e0b163b504db13
 y
 Iapp/src/main/kotlin/com/platzi/android/rickandmorty/presentation/Event.kt,5/8/5824d0dba8b69579423cfec1b025c761f5f458dd
-Ñ
-Tapp/src/main/kotlin/com/platzi/android/rickandmorty/adapters/CharacterGridAdapter.kt,2/1/21897f785dd434288805bf831ad43d2b6a583f5b
-Ç
-Rapp/src/main/kotlin/com/platzi/android/rickandmorty/adapters/EpisodeListAdapter.kt,8/9/89dcf34901a7216c92596f5d72780ed795d51c86
-ä
-Zapp/src/main/kotlin/com/platzi/android/rickandmorty/presentation/CharacterListViewModel.kt,d/5/d51763d742db0c66182b9db640e1d1aaa9800c38
 Ä
 Papp/src/main/kotlin/com/platzi/android/rickandmorty/database/DatabaseEntities.kt,3/d/3dd75ca4c1b2e8cbe5af9c6f021c26ee5e490f1e

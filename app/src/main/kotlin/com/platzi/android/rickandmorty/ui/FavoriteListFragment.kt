@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.platzi.android.rickandmorty.R
 import com.platzi.android.rickandmorty.adapters.FavoriteListAdapter
-import com.platzi.android.rickandmorty.api.APIConstants.BASE_API_URL
+import com.platzi.android.rickandmorty.api.APIConstants
 import com.platzi.android.rickandmorty.api.CharacterRequest
 import com.platzi.android.rickandmorty.api.CharacterRetrofitDataSource
 import com.platzi.android.rickandmorty.data.CharacterRepository
@@ -22,7 +22,16 @@ import com.platzi.android.rickandmorty.database.CharacterRoomDataSource
 import com.platzi.android.rickandmorty.databinding.FragmentFavoriteListBinding
 import com.platzi.android.rickandmorty.domain.Character
 import com.platzi.android.rickandmorty.presentation.FavoriteListViewModel
+<<<<<<< HEAD
 import com.platzi.android.rickandmorty.usecases.GetAllFavoriteCharacterUseCase
+=======
+import com.platzi.android.rickandmorty.presentation.FavoriteListViewModel.FavoriteListNavigation
+import com.platzi.android.rickandmorty.presentation.FavoriteListViewModel.FavoriteListNavigation.ShowCharacterList
+import com.platzi.android.rickandmorty.presentation.FavoriteListViewModel.FavoriteListNavigation.ShowEmptyListMessage
+import com.platzi.android.rickandmorty.presentation.utils.Event
+import com.platzi.android.rickandmorty.usecases.GetAllFavoriteCharactersUseCase
+import com.platzi.android.rickandmorty.utils.getViewModel
+>>>>>>> feat/step_19/extra_use_cases_module
 import com.platzi.android.rickandmorty.utils.setItemDecorationSpacing
 import kotlinx.android.synthetic.main.fragment_favorite_list.*
 
@@ -32,6 +41,33 @@ class FavoriteListFragment : Fragment() {
 
     private lateinit var favoriteListAdapter: FavoriteListAdapter
     private lateinit var listener: OnFavoriteListFragmentListener
+<<<<<<< HEAD
+=======
+
+    private val characterRequest: CharacterRequest by lazy {
+        CharacterRequest(APIConstants.BASE_API_URL)
+    }
+
+    private val localCharacterDataSource: LocalCharacterDataSource by lazy {
+        CharacterRoomDataSource(CharacterDatabase.getDatabase(activity!!.applicationContext))
+    }
+
+    private val remoteCharacterDataSource: RemoteCharacterDataSource by lazy {
+        CharacterRetrofitDataSource(characterRequest)
+    }
+
+    private val characterRepository: CharacterRepository by lazy {
+        CharacterRepository(remoteCharacterDataSource, localCharacterDataSource)
+    }
+
+    private val getAllFavoriteCharactersUseCase: GetAllFavoriteCharactersUseCase by lazy {
+        GetAllFavoriteCharactersUseCase(characterRepository)
+    }
+
+    private val favoriteListViewModel: FavoriteListViewModel by lazy {
+        getViewModel { FavoriteListViewModel(getAllFavoriteCharactersUseCase) }
+    }
+>>>>>>> feat/step_19/extra_use_cases_module
 
     private val characterRequest: CharacterRequest by lazy {
         CharacterRequest(BASE_API_URL)
@@ -96,6 +132,7 @@ class FavoriteListFragment : Fragment() {
             setItemDecorationSpacing(resources.getDimension(R.dimen.list_item_padding))
             adapter = favoriteListAdapter
         }
+<<<<<<< HEAD
 
         // lo que se obtenga del live data volver a enviar a viewmodel para validar lista
         favoriteListViewModel.favoriteCharacterList.observe(
@@ -121,9 +158,31 @@ class FavoriteListFragment : Fragment() {
         )
     }
 
+=======
+
+        favoriteListViewModel.favoriteCharacterList.observe(this, Observer(favoriteListViewModel::onFavoriteCharacterList))
+        favoriteListViewModel.events.observe(this, Observer(this::validateEvents))
+    }
+
+>>>>>>> feat/step_19/extra_use_cases_module
     //endregion
 
     //region Private Methods
+
+    private fun validateEvents(event: Event<FavoriteListNavigation>?) {
+        event?.getContentIfNotHandled()?.let { navigation ->
+            when (navigation) {
+                is ShowCharacterList -> navigation.run {
+                    tvEmptyListMessage.isVisible = false
+                    favoriteListAdapter.updateData(characterList)
+                }
+                ShowEmptyListMessage -> {
+                    tvEmptyListMessage.isVisible = true
+                    favoriteListAdapter.updateData(emptyList())
+                }
+            }
+        }
+    }
 
     //endregion
 

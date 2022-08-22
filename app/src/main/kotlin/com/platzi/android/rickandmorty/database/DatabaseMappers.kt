@@ -28,7 +28,10 @@ fun LocationEntity.toLocationDomain() = Location(
     locationUrl
 )
 
+<<<<<<< HEAD
 // / de dominio a entity (base de datos)
+=======
+>>>>>>> feat/step_19/extra_use_cases_module
 fun Character.toCharacterEntity() = CharacterEntity(
     id,
     name,
