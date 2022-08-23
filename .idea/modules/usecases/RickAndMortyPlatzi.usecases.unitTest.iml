@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":usecases:unitTest" external.linked.project.path="$MODULE_DIR$/../../../usecases" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.type="sourceSet" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="4" platform="JVM 1.8" allPlatforms="JVM [1.8]" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xallow-no-source-files" />
+        </compilerSettings>
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../usecases/build/tmp/kotlin-classes/debugUnitTest" />
+          <option name="classpath" value="$MODULE_DIR$/../../../usecases/build/intermediates/compile_library_classes_jar/debug/classes.jar:/Users/felipechauxx/.gradle/caches/transforms-3/7b421a3576affd71e8350e5e063756db/transformed/jetified-kotlin-stdlib-jdk7-1.3.72.jar:/Users/felipechauxx/.gradle/caches/transforms-3/6844e1de03b6270bbc322759b12a3a4b/transformed/jetified-kotlin-stdlib-1.3.72.jar:/Users/felipechauxx/.gradle/caches/transforms-3/d77281ad39836b3dae2527424be8a7f7/transformed/jetified-kotlin-stdlib-common-1.3.72.jar:/Users/felipechauxx/.gradle/caches/transforms-3/a2ac4c31b97da6d99eb2f8f920180ef7/transformed/jetified-annotations-13.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/31fba01d6e374181923303bfa4fa815d/transformed/jetified-rxjava-2.2.19.jar:/Users/felipechauxx/.gradle/caches/transforms-3/9808c0e2716d7f6e2ad35b85efd6cc10/transformed/jetified-reactive-streams-1.0.3.jar:/Users/felipechauxx/Documents/Developer/PLATZI/curso-clean-architecture-platzi/data/build/intermediates/compile_library_classes_jar/debug/classes.jar:/Users/felipechauxx/Documents/Developer/PLATZI/curso-clean-architecture-platzi/domain/build/.transforms/2044770d11e26f95600be86452cdfdf6/transformed/jetified-domain.jar:/Users/felipechauxx/Library/Android/sdk/platforms/android-32/android.jar:/Users/felipechauxx/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="moduleName" value="usecases_debug" />
+          <option name="friendPaths">
+            <array>
+              <option value="$MODULE_DIR$/../../../usecases/build/tmp/kotlin-classes/debug" />
+              <option value="$MODULE_DIR$/../../../usecases/build/intermediates/javac/debug/classes" />
+              <option value="$MODULE_DIR$/../../../usecases/build/intermediates/compile_library_classes_jar/debug/classes.jar" />
+            </array>
+          </option>
+          <option name="languageVersion" value="1.6" />
+          <option name="apiVersion" value="1.3" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
+        <afterSyncTasks>
+          <task>generateDebugSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../usecases/src/main/res;file://$MODULE_DIR$/../../../usecases/src/debug/res;file://$MODULE_DIR$/../../../usecases/build/generated/res/rs/debug;file://$MODULE_DIR$/../../../usecases/build/generated/res/resValues/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../usecases/src/androidTest/res;file://$MODULE_DIR$/../../../usecases/src/androidTestDebug/res;file://$MODULE_DIR$/../../../usecases/build/generated/res/rs/androidTest/debug;file://$MODULE_DIR$/../../../usecases/build/generated/res/resValues/androidTest/debug" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+        <option name="PROJECT_TYPE" value="1" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../usecases/build/generated/ap_generated_sources/debugUnitTest/out" />
+    <content url="file://$MODULE_DIR$/../../../usecases/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../usecases/src/test/java" isTestSource="true" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../usecases/src/testDebug" />
+    <orderEntry type="jdk" jdkName="Android API 32 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="RickAndMortyPlatzi.usecases.main" scope="TEST" />
+    <orderEntry type="module" module-name="RickAndMortyPlatzi.data.main" scope="TEST" />
+    <orderEntry type="module" module-name="RickAndMortyPlatzi.domain.main" scope="TEST" />
+    <orderEntry type="module-library" scope="TEST">
+      <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.72/3adfc2f4ea4243e01204be8081fe63bde6b12815/kotlin-stdlib-jdk7-1.3.72.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.72/d5c341c5580f6d1289efe06247f4818e57ad24eb/kotlin-stdlib-jdk7-1.3.72-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.72/e83fed78d9bc2951a2c7e457969d5fd171cb9d5f/kotlin-stdlib-jdk7-1.3.72-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.72">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.72/8032138f12c0180bc4e51fe139d4c52b46db6109/kotlin-stdlib-1.3.72.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.72/b1d2ee58cf8c842c5143315cff20019a6173378d/kotlin-stdlib-1.3.72-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.72/28f81264fad20dd20cc692003f4a27d355632073/kotlin-stdlib-1.3.72-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.72">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.72/6ca8bee3d88957eaaaef077c41c908c9940492d8/kotlin-stdlib-common-1.3.72.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.72/b1d2ee58cf8c842c5143315cff20019a6173378d/kotlin-stdlib-common-1.3.72-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.72/8c35588215bc56f828c189e9edc37ee51672cf5c/kotlin-stdlib-common-1.3.72-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library name="Gradle: org.jetbrains:annotations:13.0">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/73368c3b0887f3adc2c2730dd1b95d7c3781aaf3/annotations-13.0-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" scope="TEST" name="Gradle: io.reactivex.rxjava2:rxjava:2.2.19" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.reactivestreams:reactive-streams:1.0.3" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="RickAndMortyPlatzi.usecases.main" />
+</module>

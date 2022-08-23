@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.LiveDataReactiveStreams
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.platzi.android.rickandmorty.database.CharacterEntity
 import com.platzi.android.rickandmorty.domain.Character
 import com.platzi.android.rickandmorty.usecases.GetAllFavoriteCharacterUseCase
 import io.reactivex.disposables.CompositeDisposable

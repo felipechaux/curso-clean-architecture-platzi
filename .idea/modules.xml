@@ -14,6 +14,15 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/RickAndMortyPlatzi.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/RickAndMortyPlatzi.domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/RickAndMortyPlatzi.domain.main.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/RickAndMortyPlatzi.domain.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/RickAndMortyPlatzi.domain.test.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/RickAndMortyPlatzi.domain.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/RickAndMortyPlatzi.framework.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/RickAndMortyPlatzi.framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/imagemanager/RickAndMortyPlatzi.framework.imagemanager.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/imagemanager/RickAndMortyPlatzi.framework.imagemanager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/imagemanager/RickAndMortyPlatzi.framework.imagemanager.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/imagemanager/RickAndMortyPlatzi.framework.imagemanager.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/imagemanager/RickAndMortyPlatzi.framework.imagemanager.main.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/imagemanager/RickAndMortyPlatzi.framework.imagemanager.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/framework/imagemanager/RickAndMortyPlatzi.framework.imagemanager.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/framework/imagemanager/RickAndMortyPlatzi.framework.imagemanager.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usecases/RickAndMortyPlatzi.usecases.iml" filepath="$PROJECT_DIR$/.idea/modules/usecases/RickAndMortyPlatzi.usecases.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usecases/RickAndMortyPlatzi.usecases.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/usecases/RickAndMortyPlatzi.usecases.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usecases/RickAndMortyPlatzi.usecases.main.iml" filepath="$PROJECT_DIR$/.idea/modules/usecases/RickAndMortyPlatzi.usecases.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/usecases/RickAndMortyPlatzi.usecases.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/usecases/RickAndMortyPlatzi.usecases.unitTest.iml" />
     </modules>
   </component>
 </project>
