@@ -11,18 +11,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.platzi.android.rickandmorty.R
 import com.platzi.android.rickandmorty.adapters.FavoriteListAdapter
-import com.platzi.android.rickandmorty.api.APIConstants.BASE_API_URL
-import com.platzi.android.rickandmorty.api.CharacterRequest
-import com.platzi.android.rickandmorty.api.CharacterRetrofitDataSource
-import com.platzi.android.rickandmorty.data.CharacterRepository
-import com.platzi.android.rickandmorty.data.LocalCharacterDataSource
-import com.platzi.android.rickandmorty.data.RemoteCharacterDataSource
-import com.platzi.rickandmorty.databasemanager.CharacterDatabase
-import com.platzi.rickandmorty.databasemanager.CharacterRoomDataSource
 import com.platzi.android.rickandmorty.databinding.FragmentFavoriteListBinding
+import com.platzi.android.rickandmorty.di.FavoriteListComponent
+import com.platzi.android.rickandmorty.di.FavoriteListModule
 import com.platzi.android.rickandmorty.domain.Character
 import com.platzi.android.rickandmorty.presentation.FavoriteListViewModel
-import com.platzi.android.rickandmorty.usecases.GetAllFavoriteCharacterUseCase
+import com.platzi.android.rickandmorty.utils.app
+import com.platzi.android.rickandmorty.utils.getViewModel
 import com.platzi.android.rickandmorty.utils.setItemDecorationSpacing
 import kotlinx.android.synthetic.main.fragment_favorite_list.*
 
@@ -32,29 +27,10 @@ class FavoriteListFragment : Fragment() {
 
     private lateinit var favoriteListAdapter: FavoriteListAdapter
     private lateinit var listener: OnFavoriteListFragmentListener
-
-    private val characterRequest: CharacterRequest by lazy {
-        CharacterRequest(BASE_API_URL)
-    }
-
-    private val remoteCharacterDataSource: RemoteCharacterDataSource by lazy {
-        CharacterRetrofitDataSource(characterRequest)
-    }
-
-    private val localCharacterDataSource: LocalCharacterDataSource by lazy {
-        CharacterRoomDataSource(CharacterDatabase.getDatabase(activity!!.applicationContext))
-    }
-
-    private val characterRepository: CharacterRepository by lazy {
-        CharacterRepository(remoteCharacterDataSource, localCharacterDataSource)
-    }
-
-    private val getAllFavoriteCharacterUseCase: GetAllFavoriteCharacterUseCase by lazy {
-        GetAllFavoriteCharacterUseCase(characterRepository)
-    }
+    private lateinit var favoriteListComponent: FavoriteListComponent
 
     private val favoriteListViewModel: FavoriteListViewModel by lazy {
-        FavoriteListViewModel(getAllFavoriteCharacterUseCase)
+        getViewModel { favoriteListComponent.favoriteListViewModel }
     }
     //endregion
 
@@ -67,6 +43,11 @@ class FavoriteListFragment : Fragment() {
         } catch (e: ClassCastException) {
             throw ClassCastException("$context must implement OnFavoriteListFragmentListener")
         }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        favoriteListComponent = context!!.app.component.inject(FavoriteListModule())
     }
 
     override fun onCreateView(

@@ -1,9 +1,7 @@
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android-extensions'
-    id 'kotlin-kapt'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdk 32
@@ -35,7 +33,12 @@ dependencies {
     implementation project(":data")
     implementation project(":domain")
 
+    //kotlin
     implementation kotlinLib
+
+    implementation daggerLib
+    kapt daggerCompiler
+
     //Gson
     implementation gsonLib
     //Room
