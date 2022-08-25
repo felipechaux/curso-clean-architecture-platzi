@@ -122,5 +122,4 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.gson:gson:2.8.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: io.reactivex.rxjava2:rxandroid:2.1.1@aar" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="RickAndMortyPlatzi.framework.requestmanager.main" />
 </module>

@@ -35,7 +35,7 @@ dependencies {
 
     //kotlin
     implementation kotlinLib
-
+    //Dagger
     implementation daggerLib
     kapt daggerCompiler
 

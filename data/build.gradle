@@ -34,7 +34,7 @@ dependencies {
     implementation project(":domain")
     //Kotlin
     implementation kotlinLib
-    
+    //Dagger
     implementation daggerLib
     kapt daggerCompiler
     //RxJava

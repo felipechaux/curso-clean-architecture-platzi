@@ -52,6 +52,7 @@ dependencies {
     implementation project(":framework:databasemanager")
     implementation project(":framework:requestmanager")
 
+    //Dagger
     implementation daggerLib
     kapt daggerCompiler
 

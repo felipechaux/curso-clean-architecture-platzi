@@ -152,5 +152,4 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.vectordrawable:vectordrawable:1.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.exifinterface:exifinterface:1.0.0@aar" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="RickAndMortyPlatzi.framework.imagemanager.main" />
 </module>

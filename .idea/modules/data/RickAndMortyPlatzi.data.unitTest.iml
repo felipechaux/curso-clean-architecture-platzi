@@ -113,5 +113,4 @@
     <orderEntry type="library" scope="TEST" name="Gradle: io.reactivex.rxjava2:rxjava:2.2.19" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.reactivestreams:reactive-streams:1.0.3" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="RickAndMortyPlatzi.data.main" />
 </module>
