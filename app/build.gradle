@@ -49,15 +49,13 @@ dependencies {
     implementation project(":domain")
     implementation project(":usecases")
     implementation project(":framework:imagemanager")
+    implementation project(":framework:databasemanager")
 
     //Kotlin
     implementation kotlinLib
 
     //KTX
     implementation ktxLib
-
-    //Gson
-    implementation gsonLib
 
     //Material
     implementation materialLib
@@ -66,11 +64,6 @@ dependencies {
     implementation okHttpInterceptorLib
     implementation retrofitRxJavaLib
     implementation retrofitGsonLib
-
-    //Room
-    api roomLib
-    kapt roomCompiler
-    implementation roomRxJavaLib
 
     implementation reactiveStreamsLib
 

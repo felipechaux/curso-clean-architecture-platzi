@@ -1,4 +1,4 @@
-package com.platzi.android.rickandmorty.database
+package com.platzi.rickandmorty.databasemanager
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson
@@ -14,7 +14,7 @@ class ListStringConverters {
     //endregion
 
     //region Public Methods
-
+    // pasar de un tipo a otro para poder leerse
     @TypeConverter
     fun stringToStringList(data: String?): List<String?>? {
         if (data == null) {
