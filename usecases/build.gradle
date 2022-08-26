@@ -36,11 +36,12 @@ dependencies {
     implementation project(":data")
     implementation project(":domain")
 
-    implementation daggerLib
-    kapt daggerCompiler
-
     //Kotlin
     implementation kotlinLib
+
+    //Dagger
+    implementation daggerLib
+    kapt daggerCompiler
 
     //RxJava
     implementation rxJavaLib

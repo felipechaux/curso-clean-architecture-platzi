@@ -59,7 +59,3 @@ w
 Gdata/src/main/java/com/platzi/android/rickandmorty/data/Repositories.kt,9/2/927ac1ab6b473a678073ab0300fa3dee29bc04cd
 {
 Kdata/src/main/java/com/platzi/android/rickandmorty/data/RepositoryModule.kt,7/3/735ab61e3f2ed396a7e04b5494402f17f4e63d07
-@
-app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
-|
-Lapp/src/main/kotlin/com/platzi/android/rickandmorty/RickAndMortyPlatziApp.kt,2/f/2f8ff73bb7af0eba71742142c000cf4e7086735e
