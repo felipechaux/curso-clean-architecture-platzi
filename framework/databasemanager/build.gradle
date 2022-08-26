@@ -25,22 +25,26 @@ android {
 }
 
 dependencies {
+    //Projects
     implementation project(":data")
     implementation project(":domain")
 
-    //kotlin
+    //Kotlin
     implementation kotlinLib
+
     //Dagger
     implementation daggerLib
     kapt daggerCompiler
 
     //Gson
     implementation gsonLib
+
+    //RxJava
+    implementation rxAndroidLib
+    implementation rxJavaLib
+
     //Room
     api roomLib
     kapt roomCompiler
     implementation roomRxJavaLib
-    //RxJava
-    implementation rxAndroidLib
-    implementation rxJavaLib
 }
