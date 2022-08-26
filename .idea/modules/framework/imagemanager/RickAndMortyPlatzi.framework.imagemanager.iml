@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":framework:imagemanager" external.linked.project.path="$MODULE_DIR$/../../../../framework/imagemanager" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="RickAndMortyPlatzi.framework" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+<module version="4">
   <component name="FacetManager">
-    <facet type="android-gradle" name="Android-Gradle">
-      <configuration>
-        <option name="GRADLE_PROJECT_PATH" value=":framework:imagemanager" />
-        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" value="7.2.1" />
-        <option name="LAST_KNOWN_AGP_VERSION" value="7.2.1" />
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="4" platform="JVM 1.8" allPlatforms="JVM [1.8]" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xallow-no-source-files" />
+        </compilerSettings>
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../../framework/imagemanager/build/tmp/kotlin-classes/debug" />
+          <option name="classpath" value="$MODULE_DIR$/../../../../framework/imagemanager/build/intermediates/compile_r_class_jar/debug/R.jar:/Users/felipechauxx/.gradle/caches/transforms-3/7b421a3576affd71e8350e5e063756db/transformed/jetified-kotlin-stdlib-jdk7-1.3.72.jar:/Users/felipechauxx/.gradle/caches/transforms-3/6844e1de03b6270bbc322759b12a3a4b/transformed/jetified-kotlin-stdlib-1.3.72.jar:/Users/felipechauxx/.gradle/caches/transforms-3/d77281ad39836b3dae2527424be8a7f7/transformed/jetified-kotlin-stdlib-common-1.3.72.jar:/Users/felipechauxx/.gradle/caches/transforms-3/a2ac4c31b97da6d99eb2f8f920180ef7/transformed/jetified-annotations-13.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/7219ce54aea872950a340daf7a06a1ba/transformed/jetified-glide-4.11.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/da7ee70a8ba5ffbb0acb619f1196e437/transformed/jetified-gifdecoder-4.11.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/1dc441ae10f9b35740058e8302a58303/transformed/fragment-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/5803af082de06000491beef68185b4b7/transformed/exifinterface-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/aada03f0e4e304797cccfcd98c71c07c/transformed/vectordrawable-animated-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/6482ff0549b8755e0bb98b84752c8546/transformed/legacy-support-core-ui-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/7ba2721a14833c3f6aab17ac3f4845bb/transformed/legacy-support-core-utils-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/e2ea4b3f49374610342e9a16ff374773/transformed/loader-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/c82d6424ae4e17bf0e87b1f95b52c88f/transformed/vectordrawable-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/adf27eef09e5a6cee4491c74482f10e7/transformed/viewpager-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/505d55b5a9d2a251e36f6f9d11396be4/transformed/coordinatorlayout-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/d9e50831b84a728c0ce3f6b252386b9e/transformed/drawerlayout-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/90c0ab4d56916612ab8d0138c5334196/transformed/slidingpanelayout-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/1487cb26c8f0c8047e69745141857b4e/transformed/customview-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/bf430c9235a7d5bea538f40688e96f37/transformed/swiperefreshlayout-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/e3355c3baf55cf55e2af8e02623f612a/transformed/asynclayoutinflater-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/39e7b39b7d0cf2be5da5c4d659d1d5e3/transformed/core-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/4cc3677d94a3645c7045b83c44a6e9a5/transformed/lifecycle-viewmodel-2.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/7f2c4153abd6ad5a9402892d7d410959/transformed/versionedparcelable-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.0.0/42858b26cafdaa69b6149f45dfc2894007bc2c7a/collection-1.0.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/77e323d58fbe8b84104386853bfed004/transformed/lifecycle-runtime-2.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/83a214e1b0ebab88379903a1b62410fa/transformed/interpolator-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/4ea59e3c39087d216d72b8c31ef363f1/transformed/cursoradapter-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/7793ea0e48f2bbe370df6bc6d8b2b256/transformed/documentfile-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/9bcfa2c116582d79934a41c5e8d98d71/transformed/localbroadcastmanager-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/21597a13672c3f5f3d5ae4471f48592e/transformed/print-1.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/38c46d4e4da8437e62c7d3b08f9ef7e6/transformed/lifecycle-livedata-2.0.0-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/921c836903570f50569536fb54fa0b2c/transformed/lifecycle-livedata-core-2.0.0-api.jar:/Users/felipechauxx/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.0.0/e070ffae07452331bc5684734fce6831d531785c/lifecycle-common-2.0.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/1085ceb1c1e7f2c33c04e89119542e4b/transformed/core-runtime-2.0.0-api.jar:/Users/felipechauxx/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.0.0/bb21b9a11761451b51624ac428d1f1bb5deeac38/core-common-2.0.0.jar:/Users/felipechauxx/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.0.0/45599f2cd5965ac05a1488fa2a5c0cdd7c499ead/annotation-1.0.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/b39e8e3293484895f556e1209229df14/transformed/jetified-disklrucache-4.11.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/7eba1fc9992289a7de9569b69c97a722/transformed/jetified-annotations-4.11.0.jar:/Users/felipechauxx/Library/Android/sdk/platforms/android-32/android.jar:/Users/felipechauxx/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="moduleName" value="imagemanager_debug" />
+          <option name="languageVersion" value="1.6" />
+          <option name="apiVersion" value="1.3" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
       </configuration>
     </facet>
     <facet type="android" name="Android">
@@ -25,16 +42,5 @@
         <option name="PROJECT_TYPE" value="1" />
       </configuration>
     </facet>
-  </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../../../../framework/imagemanager/build/intermediates/javac/debug/classes" />
-    <output-test url="file://$MODULE_DIR$/../../../../framework/imagemanager/build/intermediates/javac/debugUnitTest/classes" />
-    <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../../framework/imagemanager">
-      <excludeFolder url="file://$MODULE_DIR$/../../../../framework/imagemanager/.gradle" />
-      <excludeFolder url="file://$MODULE_DIR$/../../../../framework/imagemanager/build" />
-    </content>
-    <orderEntry type="jdk" jdkName="Android API 32 Platform" jdkType="Android SDK" />
-    <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
