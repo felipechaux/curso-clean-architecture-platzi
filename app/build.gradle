@@ -48,16 +48,16 @@ dependencies {
     implementation project(":data")
     implementation project(":domain")
     implementation project(":usecases")
-    implementation project(":framework:imagemanager")
     implementation project(":framework:databasemanager")
+    implementation project(":framework:imagemanager")
     implementation project(":framework:requestmanager")
+
+    //Kotlin
+    implementation kotlinLib
 
     //Dagger
     implementation daggerLib
     kapt daggerCompiler
-
-    //Kotlin
-    implementation kotlinLib
 
     //KTX
     implementation ktxLib
@@ -65,7 +65,7 @@ dependencies {
     //Material
     implementation materialLib
 
-
+    //Reactive Streams
     implementation reactiveStreamsLib
 
     //RxJava
