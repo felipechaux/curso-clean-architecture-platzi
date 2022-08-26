@@ -2,25 +2,28 @@
 <module external.linked.project.id=":framework:requestmanager:unitTest" external.linked.project.path="$MODULE_DIR$/../../../../framework/requestmanager" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.type="sourceSet" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
-      <configuration version="4" platform="JVM 1.8" allPlatforms="JVM [1.8]" useProjectSettings="false">
+      <configuration version="4" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false">
         <compilerSettings>
           <option name="additionalArguments" value="-Xallow-no-source-files" />
         </compilerSettings>
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/../../../../framework/requestmanager/build/tmp/kotlin-classes/debugUnitTest" />
-          <option name="classpath" value="$USER_HOME$/.gradle/caches/transforms-3/eea7378100620c6c0bea36c5ab41a2db/transformed/jetified-kotlin-android-extensions-runtime-1.6.10.jar:/Users/felipechauxx/.gradle/caches/transforms-3/7b421a3576affd71e8350e5e063756db/transformed/jetified-kotlin-stdlib-jdk7-1.3.72.jar:/Users/felipechauxx/.gradle/caches/transforms-3/8731c14f82a28f8519f12af82e3c7a9c/transformed/jetified-logging-interceptor-4.7.2.jar:/Users/felipechauxx/.gradle/caches/transforms-3/e9ac5160286828e9dd00bb7e581fab97/transformed/jetified-adapter-rxjava2-2.9.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/15ec2bc912b889886f2447341090f352/transformed/jetified-converter-gson-2.9.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/bddc7daabea32c7b31b2152e3bdd0a38/transformed/jetified-retrofit-2.9.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/253816071d44d87503a90f6e41cb3658/transformed/jetified-okhttp-4.7.2.jar:/Users/felipechauxx/.gradle/caches/transforms-3/cff398b8533a1e656c1173e3225bb687/transformed/jetified-okio-jvm-2.6.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/587930b521ea7a215066ba51b171b23e/transformed/jetified-kotlin-stdlib-1.6.10.jar:/Users/felipechauxx/.gradle/caches/transforms-3/a2ac4c31b97da6d99eb2f8f920180ef7/transformed/jetified-annotations-13.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/fdfbc060cee24428304ba6ad51a39e96/transformed/jetified-kotlin-stdlib-common-1.6.10.jar:/Users/felipechauxx/.gradle/caches/transforms-3/45c74cb6e07e9c49609a6cd83c01466b/transformed/jetified-dagger-2.34.jar:/Users/felipechauxx/.gradle/caches/transforms-3/f625170862a1fc414be68d675a2c35ae/transformed/jetified-javax.inject-1.jar:/Users/felipechauxx/.gradle/caches/transforms-3/997d30846a703201ae4aba28158ab5f9/transformed/jetified-rxandroid-2.1.1-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/31fba01d6e374181923303bfa4fa815d/transformed/jetified-rxjava-2.2.19.jar:/Users/felipechauxx/.gradle/caches/transforms-3/9808c0e2716d7f6e2ad35b85efd6cc10/transformed/jetified-reactive-streams-1.0.3.jar:/Users/felipechauxx/.gradle/caches/transforms-3/06e4315c29c1cf375fb1453a3c71e6e4/transformed/jetified-gson-2.8.5.jar:/Users/felipechauxx/Documents/Developer/PLATZI/curso-clean-architecture-platzi/domain/build/.transforms/2044770d11e26f95600be86452cdfdf6/transformed/jetified-domain.jar:/Users/felipechauxx/Library/Android/sdk/platforms/android-32/android.jar:/Users/felipechauxx/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/transforms-3/342168554cc169bb43722454a184cd3b/transformed/jetified-kotlin-android-extensions-runtime-1.3.72.jar:/Users/felipechauxx/.gradle/caches/transforms-3/7d8791c7064bf93e5c30767c3625d389/transformed/jetified-kotlin-stdlib-jdk7-1.3.72.jar:/Users/felipechauxx/.gradle/caches/transforms-3/6ef42f9e4940f542a9a44742a55e399e/transformed/jetified-logging-interceptor-4.7.2.jar:/Users/felipechauxx/.gradle/caches/transforms-3/4746f0b3bca2d9031b851fc4e347c98b/transformed/jetified-adapter-rxjava2-2.9.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/6fb8cf5744eaa0624610e5fb98f4959e/transformed/jetified-converter-gson-2.9.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/a1d7c116631b62303f85a0d87b0a92ae/transformed/jetified-retrofit-2.9.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/4bc827f0a5194537c6fdaa14256d218e/transformed/jetified-okhttp-4.7.2.jar:/Users/felipechauxx/.gradle/caches/transforms-3/d4c8bc8ff77e32bfcdf66b9a81638269/transformed/jetified-okio-jvm-2.6.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/2802fdbe9e008d5f9c4c1db9c2495950/transformed/jetified-kotlin-stdlib-1.3.72.jar:/Users/felipechauxx/.gradle/caches/transforms-3/3f44e1359ab70d919f5b83933d1e640e/transformed/jetified-kotlin-stdlib-common-1.3.72.jar:/Users/felipechauxx/.gradle/caches/transforms-3/8a351bd4a80784dfbf24b5b3a3eb9508/transformed/jetified-annotations-13.0.jar:/Users/felipechauxx/.gradle/caches/transforms-3/57bd5703afd8645765808917aaf8bc37/transformed/jetified-dagger-2.28.jar:/Users/felipechauxx/.gradle/caches/transforms-3/15af007f14045c902b9031814dfc3d6d/transformed/jetified-javax.inject-1.jar:/Users/felipechauxx/.gradle/caches/transforms-3/67380d0bbaf97a02041ff939ab25e129/transformed/jetified-rxandroid-2.1.1-api.jar:/Users/felipechauxx/.gradle/caches/transforms-3/e3a613d28decec8c7a8b06f12c4acb7e/transformed/jetified-rxjava-2.2.19.jar:/Users/felipechauxx/.gradle/caches/transforms-3/070e30503fb16640f89cd1681878690e/transformed/jetified-reactive-streams-1.0.3.jar:/Users/felipechauxx/.gradle/caches/transforms-3/8a92b713dda8b90dd93e440eaec9afd2/transformed/jetified-gson-2.8.5.jar:/Users/felipechauxx/Documents/Developer/PLATZI/curso-clean-architecture-platzi/domain/build/.transforms/4d13248ff98557e789ff4d1547ebc42a/transformed/jetified-domain.jar:/Users/felipechauxx/Library/Android/sdk/platforms/android-29/android.jar" />
           <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
           <option name="moduleName" value="requestmanager_debug" />
+          <option name="jvmTarget" value="1.6" />
           <option name="friendPaths">
             <array>
               <option value="$MODULE_DIR$/../../../../framework/requestmanager/build/tmp/kotlin-classes/debug" />
               <option value="$MODULE_DIR$/../../../../framework/requestmanager/build/intermediates/javac/debug/classes" />
+              <option value="$MODULE_DIR$/../../../../framework/requestmanager/build/intermediates/javac/debug/classes" />
+              <option value="$MODULE_DIR$/../../../../framework/requestmanager/build/tmp/kotlin-classes/debug" />
               <option value="$MODULE_DIR$/../../../../framework/requestmanager/build/tmp/kapt3/classes/debug" />
-              <option value="$MODULE_DIR$/../../../../framework/requestmanager/build/intermediates/compile_library_classes_jar/debug/classes.jar" />
             </array>
           </option>
-          <option name="languageVersion" value="1.6" />
-          <option name="apiVersion" value="1.6" />
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
           <option name="pluginOptions">
             <array>
               <option value="plugin:org.jetbrains.kotlin.android:experimental=false" />
@@ -30,16 +33,15 @@
           </option>
           <option name="pluginClasspaths">
             <array>
-              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.6.10/e61216589e513d39a8976573c83afc8784b4b6d/kotlin-android-extensions-1.6.10.jar" />
-              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.6.10/88f2073f4020cdb83132cfe940ceb9a60aba54ea/kotlin-compiler-embeddable-1.6.10.jar" />
-              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.10/1cbe9c92c12a94eea200d23c2bbaedaf3daf5132/kotlin-reflect-1.6.10.jar" />
-              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.6.10/b8af3fe6f1ca88526914929add63cf5e7c5049af/kotlin-stdlib-1.6.10.jar" />
-              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.6.10/d0a7ff2e2500ef497ed0214ae40ad3c8387a6164/kotlin-script-runtime-1.6.10.jar" />
-              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.6.10/a56d79bcbea411fa6058e4ecffc2de73e742bd2a/kotlin-daemon-embeddable-1.6.10.jar" />
               <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20181211/216c2e14b070f334479d800987affe4054cd563f/trove4j-1.0.20181211.jar" />
-              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.6.0/330f2244e9030119ab3030fc3fededc86713d9cc/jna-5.6.0.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3.72/ecbb105a12a9766d2188f454b3bc3aab46cb80b6/kotlin-android-extensions-1.3.72.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.3.72/fb72232c8fa977d5e07d33c43381ddbdc5edab6/kotlin-compiler-embeddable-1.3.72.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.3.72/53bbaa2816dbf6bdb85f629451b1fcc88f2164d2/kotlin-daemon-embeddable-1.3.72.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3.72/86613e1a669a701b0c660bfd2af4f82a7ae11fca/kotlin-reflect-1.3.72.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.3.72/657d8d34d91e1964b4439378c09933e840bfe8d5/kotlin-script-runtime-1.3.72.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.72/6ca8bee3d88957eaaaef077c41c908c9940492d8/kotlin-stdlib-common-1.3.72.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.72/8032138f12c0180bc4e51fe139d4c52b46db6109/kotlin-stdlib-1.3.72.jar" />
               <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
-              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.6.10/c118700e3a33c8a0d9adc920e9dec0831171925/kotlin-stdlib-common-1.6.10.jar" />
             </array>
           </option>
           <option name="errors">
@@ -59,45 +61,30 @@
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
-        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../../framework/requestmanager/src/main/res;file://$MODULE_DIR$/../../../../framework/requestmanager/src/debug/res;file://$MODULE_DIR$/../../../../framework/requestmanager/build/generated/res/rs/debug;file://$MODULE_DIR$/../../../../framework/requestmanager/build/generated/res/resValues/debug" />
-        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../../framework/requestmanager/src/androidTest/res;file://$MODULE_DIR$/../../../../framework/requestmanager/src/androidTestDebug/res;file://$MODULE_DIR$/../../../../framework/requestmanager/build/generated/res/rs/androidTest/debug;file://$MODULE_DIR$/../../../../framework/requestmanager/build/generated/res/resValues/androidTest/debug" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../../framework/requestmanager/src/main/res;file://$MODULE_DIR$/../../../../framework/requestmanager/src/debug/res;file://$MODULE_DIR$/../../../../framework/requestmanager/build/generated/res/rs/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../../framework/requestmanager/src/androidTest/res;file://$MODULE_DIR$/../../../../framework/requestmanager/src/androidTestDebug/res;file://$MODULE_DIR$/../../../../framework/requestmanager/build/generated/res/rs/androidTest/debug" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
         <option name="PROJECT_TYPE" value="1" />
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../framework/requestmanager/build/generated/ap_generated_sources/debugUnitTest/out" />
     <content url="file://$MODULE_DIR$/../../../../framework/requestmanager/build/generated/source/kapt/debugUnitTest" />
     <content url="file://$MODULE_DIR$/../../../../framework/requestmanager/build/generated/source/kaptKotlin/debugUnitTest">
       <sourceFolder url="file://$MODULE_DIR$/../../../../framework/requestmanager/build/generated/source/kaptKotlin/debugUnitTest" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../framework/requestmanager/build/generated/source/kaptKotlin/debugUnitTest" isTestSource="true" />
     </content>
     <content url="file://$MODULE_DIR$/../../../../framework/requestmanager/src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../../../framework/requestmanager/src/test/java" isTestSource="true" />
     </content>
     <content url="file://$MODULE_DIR$/../../../../framework/requestmanager/src/testDebug" />
-    <orderEntry type="jdk" jdkName="Android API 32 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 29 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="RickAndMortyPlatzi.framework.requestmanager.main" scope="TEST" />
     <orderEntry type="module" module-name="RickAndMortyPlatzi.data.main" scope="TEST" />
     <orderEntry type="module" module-name="RickAndMortyPlatzi.domain.main" scope="TEST" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.6.10" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.10" level="project" />
-    <orderEntry type="module-library" scope="TEST">
-      <library name="Gradle: org.jetbrains:annotations:13.0">
-        <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar!/" />
-        </CLASSES>
-        <JAVADOC>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/73368c3b0887f3adc2c2730dd1b95d7c3781aaf3/annotations-13.0-javadoc.jar!/" />
-        </JAVADOC>
-        <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.3.72" level="project" />
     <orderEntry type="module-library" scope="TEST">
       <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72">
         <CLASSES>
@@ -111,16 +98,55 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="TEST" name="Gradle: com.google.dagger:dagger:2.34" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.okhttp3:logging-interceptor:4.7.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.retrofit2:adapter-rxjava2:2.9.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.retrofit2:converter-gson:2.9.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.retrofit2:retrofit:2.9.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.okhttp3:okhttp:4.7.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.okio:okio:2.6.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.retrofit2:adapter-rxjava2:2.9.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.retrofit2:retrofit:2.9.0" level="project" />
+    <orderEntry type="module-library" scope="TEST">
+      <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.72">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.72/8032138f12c0180bc4e51fe139d4c52b46db6109/kotlin-stdlib-1.3.72.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.72/b1d2ee58cf8c842c5143315cff20019a6173378d/kotlin-stdlib-1.3.72-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.72/28f81264fad20dd20cc692003f4a27d355632073/kotlin-stdlib-1.3.72-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.72">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.72/6ca8bee3d88957eaaaef077c41c908c9940492d8/kotlin-stdlib-common-1.3.72.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.72/b1d2ee58cf8c842c5143315cff20019a6173378d/kotlin-stdlib-common-1.3.72-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.72/8c35588215bc56f828c189e9edc37ee51672cf5c/kotlin-stdlib-common-1.3.72-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library name="Gradle: org.jetbrains:annotations:13.0">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/73368c3b0887f3adc2c2730dd1b95d7c3781aaf3/annotations-13.0-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.dagger:dagger:2.28" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: io.reactivex.rxjava2:rxjava:2.2.19" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.reactivestreams:reactive-streams:1.0.3" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.retrofit2:converter-gson:2.9.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.gson:gson:2.8.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: io.reactivex.rxjava2:rxandroid:2.1.1@aar" level="project" />
   </component>
