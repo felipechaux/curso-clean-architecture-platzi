@@ -1,6 +1,4 @@
 
-X
-(gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 y
 Iapp/src/main/kotlin/com/platzi/android/rickandmorty/presentation/Event.kt,5/8/5824d0dba8b69579423cfec1b025c761f5f458dd
 ‚
@@ -9,8 +7,6 @@ Rapp/src/main/kotlin/com/platzi/android/rickandmorty/adapters/EpisodeListAdapter
 local.properties,0/7/0712df971a99ac4d2fccb8e0fb19f377f3374cca
 Š
 Zapp/src/main/kotlin/com/platzi/android/rickandmorty/presentation/CharacterListViewModel.kt,d/5/d51763d742db0c66182b9db640e1d1aaa9800c38
-v
-Fdata/src/main/java/com/platzi/android/rickandmorty/data/DataSources.kt,1/f/1f1deec026da65ea546228091f2d79947d326065
 Œ
 \app/src/main/kotlin/com/platzi/android/rickandmorty/presentation/CharacterDetailViewModel.kt,f/3/f3eefa08341a5bb6f6fa65bbe1c4200548a34c36
 c
@@ -63,3 +59,7 @@ w
 Gdata/src/main/java/com/platzi/android/rickandmorty/data/Repositories.kt,9/2/927ac1ab6b473a678073ab0300fa3dee29bc04cd
 {
 Kdata/src/main/java/com/platzi/android/rickandmorty/data/RepositoryModule.kt,7/3/735ab61e3f2ed396a7e04b5494402f17f4e63d07
+@
+app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
+|
+Lapp/src/main/kotlin/com/platzi/android/rickandmorty/RickAndMortyPlatziApp.kt,2/f/2f8ff73bb7af0eba71742142c000cf4e7086735e
