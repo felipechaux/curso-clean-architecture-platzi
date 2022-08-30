@@ -1,4 +1,4 @@
-package com.platzi.android.rickandmorty.requestmanager // ktlint-disable filename
+package com.platzi.android.rickandmorty.requestmanager
 
 import com.platzi.android.rickandmorty.data.RemoteCharacterDataSource
 import com.platzi.android.rickandmorty.data.RemoteEpisodeDataSource
@@ -11,8 +11,8 @@ import io.reactivex.schedulers.Schedulers
 
 class CharacterRetrofitDataSource(
     private val characterRequest: CharacterRequest
-) :
-    RemoteCharacterDataSource {
+) : RemoteCharacterDataSource {
+
     override fun getAllCharacters(page: Int): Single<List<Character>> {
         return characterRequest
             .getService<CharacterService>()

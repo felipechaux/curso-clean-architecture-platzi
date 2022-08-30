@@ -4,12 +4,12 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_EPISODE
 import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_GENDER
+import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_RESULTS
 import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_ID
 import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_IMAGE
 import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_LOCATION
 import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_NAME
 import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_ORIGIN
-import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_RESULTS
 import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_SPECIES
 import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_STATUS
 import com.platzi.android.rickandmorty.requestmanager.APIConstants.KEY_URL
@@ -30,19 +30,19 @@ data class CharacterServer(
     @SerializedName(KEY_ORIGIN) val origin: OriginServer,
     @SerializedName(KEY_LOCATION) val location: LocationServer,
     @SerializedName(KEY_EPISODE) val episodeList: List<String>
-) : Parcelable
+): Parcelable
 
 @Parcelize
 data class LocationServer(
     @SerializedName(KEY_NAME) val name: String,
     @SerializedName(KEY_URL) val url: String
-) : Parcelable
+): Parcelable
 
 @Parcelize
 data class OriginServer(
     @SerializedName(KEY_NAME) val name: String,
     @SerializedName(KEY_URL) val url: String
-) : Parcelable
+): Parcelable
 
 data class EpisodeServer(
     @SerializedName(KEY_ID) val id: Int,

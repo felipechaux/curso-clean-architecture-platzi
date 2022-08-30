@@ -6,8 +6,7 @@ import com.platzi.android.rickandmorty.domain.Location
 import com.platzi.android.rickandmorty.domain.Origin
 
 fun CharacterResponseServer.toCharacterDomainList(): List<Character> = results.map {
-    // pasar de server a domain
-    it.run {
+    it.run{
         Character(
             id,
             name,

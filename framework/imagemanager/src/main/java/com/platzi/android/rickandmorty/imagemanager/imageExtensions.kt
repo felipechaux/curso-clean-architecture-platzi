@@ -4,11 +4,8 @@ import android.widget.ImageView
 import androidx.annotation.DrawableRes
 import com.bumptech.glide.Glide
 
-fun ImageView.bindCircularImageUrl(
-    url: String?,
-    @DrawableRes placeholder: Int,
-    @DrawableRes errorPlaceholder: Int
-) {
+fun ImageView.bindCircularImageUrl(url: String?, @DrawableRes placeholder: Int,
+                                   @DrawableRes errorPlaceholder: Int) {
     if (url.isNullOrBlank()) {
         setImageResource(placeholder)
         return
@@ -22,11 +19,8 @@ fun ImageView.bindCircularImageUrl(
         .into(this)
 }
 
-fun ImageView.bindImageUrl(
-    url: String?,
-    @DrawableRes placeholder: Int,
-    @DrawableRes errorPlaceholder: Int
-) {
+fun ImageView.bindImageUrl(url: String?, @DrawableRes placeholder: Int,
+                           @DrawableRes errorPlaceholder: Int) {
     if (url.isNullOrBlank()) {
         setImageResource(placeholder)
         return

@@ -33,14 +33,8 @@ Fapp/src/main/kotlin/com/platzi/android/rickandmorty/ui/MainActivity.kt,6/8/685
 dframework/databasemanager/src/main/java/com/platzi/rickandmorty/databasemanager/CharacterDatabase.kt,3/3/3393bf1a93bcdde449a4d6db4e46922bc604fd27
 ì
 cframework/requestmanager/src/main/java/com/platzi/android/rickandmorty/requestmanager/APIMappers.kt,a/2/a20b9f397cb3a6d12cc60821342f340958b5e4fe
-ö
-jframework/requestmanager/src/main/java/com/platzi/android/rickandmorty/requestmanager/APIResponseServer.kt,e/c/ec3be8f1fa8be4d53f6faa12680dd7d026cd5040
 î
 dframework/requestmanager/src/main/java/com/platzi/android/rickandmorty/requestmanager/APIServices.kt,d/5/d5ec98d1eeda9952019945f5aa7380a0afa32926
-î
-dframework/requestmanager/src/main/java/com/platzi/android/rickandmorty/requestmanager/APIRequests.kt,5/3/537487634ca9be8c344787b3f07f5192eb3c4065
-Å
-Qapp/src/main/kotlin/com/platzi/android/rickandmorty/ui/CharacterDetailActivity.kt,3/2/32eb0e8c2f2cb50e8a59752f161d0075561f169c
 ï
 eframework/requestmanager/src/main/java/com/platzi/android/rickandmorty/requestmanager/APIConstants.kt,9/e/9eafb4b3ed2247ab54f4f908faa3e1f16a944c7a
 ó
