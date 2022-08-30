@@ -11,4 +11,9 @@ class RepositoryModule {
         remoteCharacterDataSource: RemoteCharacterDataSource,
         localCharacterDataSource: LocalCharacterDataSource
     ) = CharacterRepository(remoteCharacterDataSource, localCharacterDataSource)
+
+    @Provides
+    fun episodeRepositoryProvider(
+        remoteEpisodeDataSource: RemoteEpisodeDataSource
+    ) = EpisodeRepository(remoteEpisodeDataSource)
 }
