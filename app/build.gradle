@@ -55,7 +55,7 @@ dependencies {
     implementation project(":framework:databasemanager")
     implementation project(":framework:imagemanager")
     implementation project(":framework:requestmanager")
-
+    testImplementation project(path: ':app')
     //Kotlin
     implementation kotlinLib
 
@@ -83,4 +83,11 @@ dependencies {
     implementation recyclerViewLib
     implementation swipeRefreshLayoutLib
     implementation viewPagerLib
+
+    // Testing
+    testImplementation coreTestingLib
+    testImplementation jUnitLib
+    testImplementation mockitoLib
+    testImplementation mockitoInlineLib
+
 }
