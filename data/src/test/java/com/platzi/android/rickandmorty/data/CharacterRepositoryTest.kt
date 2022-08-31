@@ -1,7 +1,10 @@
-package com.platzi.android.rickandmorty.data
+package com.platzi.android.data
 
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.given
+import com.platzi.android.rickandmorty.data.CharacterRepository
+import com.platzi.android.rickandmorty.data.LocalCharacterDataSource
+import com.platzi.android.rickandmorty.data.RemoteCharacterDataSource
 import com.platzi.android.rickandmorty.domain.Character
 import com.platzi.android.rickandmorty.domain.Location
 import com.platzi.android.rickandmorty.domain.Origin
@@ -30,7 +33,7 @@ class CharacterRepositoryTest {
     }
 
     @Test
-    fun getAllCharacters() {
+    fun `getAllCharacters should return an expected success list of characters given a page number`() {
         val expectedResult = listOf(mockedCharacter.copy(id = 1))
         given(remoteCharacterDataSource.getAllCharacters(any())).willReturn(Single.just(expectedResult))
 

@@ -44,10 +44,9 @@ android {
 dependencies {
     //Project
     implementation project(":domain")
-    androidTestImplementation project(path: ':data')
-
     //Dagger
     implementation daggerLib
+    testImplementation project(path: ':data')
     kapt daggerCompiler
 
     //Kotlin
@@ -56,10 +55,10 @@ dependencies {
     //RxJava
     implementation rxJavaLib
 
-    // Testing
-    androidTestImplementation coreTestingLib
-    androidTestImplementation jUnitLib
-    androidTestImplementation mockitoLib
-    androidTestImplementation mockitoInlineLib
+    //Testing
+    testImplementation coreTestingLib
+    testImplementation jUnitLib
+    testImplementation mockitoLib
+    testImplementation mockitoInlineLib
 }
 
