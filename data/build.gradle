@@ -44,9 +44,9 @@ android {
 dependencies {
     //Project
     implementation project(":domain")
+    testImplementation project(path: ':data')
     //Dagger
     implementation daggerLib
-    testImplementation project(path: ':data')
     kapt daggerCompiler
 
     //Kotlin
