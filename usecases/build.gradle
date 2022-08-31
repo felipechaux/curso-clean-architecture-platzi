@@ -28,6 +28,7 @@ dependencies {
     //Project
     implementation project(":data")
     implementation project(":domain")
+    testImplementation project(path: ':usecases')
 
     //Kotlin
     implementation kotlinLib
